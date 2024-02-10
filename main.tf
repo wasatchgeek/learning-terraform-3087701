@@ -50,6 +50,7 @@ module "blog_sg" {
 
 /*
  Manual way to do without using modules from terraform doc
+ 
 resource "aws_security_group" "blog" {
   name        = "blog"
   description = "Allow http and https in. Allow everything out"
