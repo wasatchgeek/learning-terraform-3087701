@@ -26,7 +26,7 @@ resource "aws_instance" "blog" {
 
 
   vpc_security_group_ids = [module.blog_sg.security_group_id]
-  
+
 
   tags = {
     Name = "HelloWorld"
@@ -48,7 +48,8 @@ module "blog_sg" {
 
 }
 
-
+/*
+ Manual way to do without using modules from terraform doc
 resource "aws_security_group" "blog" {
   name        = "blog"
   description = "Allow http and https in. Allow everything out"
@@ -87,3 +88,4 @@ resource "aws_security_group_rule" "blog_everything_out" {
 
   security_group_id = aws_security_group.blog.id
   }
+*/
